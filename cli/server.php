@@ -26,7 +26,7 @@ if ($uri !== '/' && file_exists(getcwd().$uri))
   return false;
 }
 
-if (! file_exists($codeigniter = getcwd().'/index.php'))
+if (! file_exists($codeigniter = getcwd().'/public/index.php'))
 {
   print("Your codeigniter 'index.php' path does not appear to be set correctly.\n");
   exit(3);

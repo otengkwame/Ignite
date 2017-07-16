@@ -97,8 +97,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = '../loop/codeigniter';
-
+	$system_path = '../loop/Codeigniter'; $system_path_line = __LINE__;
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
@@ -130,6 +129,35 @@ switch (ENVIRONMENT)
  * NO TRAILING SLASH!
  */
 	$view_folder = '';
+
+/*
+  *---------------------------------------------------------------
+  *STORAGEPATH FOLDER NAME
+  *---------------------------------------------------------------
+  *
+  * This folder is where users of the system will store their files
+  */
+    $storage_folder = "../storage"; $storage_line = __LINE__;
+
+/*
+  *---------------------------------------------------------------
+  * ASSETS FOLDER NAME
+  *---------------------------------------------------------------
+  *
+  * This folder is where you will put all the css, javascript, images and fonts.
+  * You can decide to locate the folder anywhere you like
+  */
+    $asset_folder = 'assets'; $asset_line = __LINE__;
+
+ /*
+  *---------------------------------------------------------------
+  * ADDON FOLDER NAME
+  *---------------------------------------------------------------
+  *
+  * This folder is where developers can add classes to expand Learny
+  * You can decide to locate the folder anywhere you like
+  */
+    //$addon_folder = 'addon';
 
 
 /*
@@ -214,7 +242,7 @@ switch (ENVIRONMENT)
 	if ( ! is_dir($system_path))
 	{
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME) . ' on line ' . $system_path_line;
 		exit(3); // EXIT_CONFIG
 	}
 
@@ -304,6 +332,40 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "asset" folder
+	if (is_dir($asset_folder))
+	{
+		define('ASSET', $asset_folder.DIRECTORY_SEPARATOR);
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$asset_folder.DIRECTORY_SEPARATOR))
+		{
+			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+			echo 'Your asset folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF . ' on line ' . $asset_line;
+			exit(3); // EXIT_CONFIG
+		}
+
+		define('ASSET', $asset_folder.DIRECTORY_SEPARATOR);
+	}
+
+	// The path to the "storage" folder
+	if (is_dir($storage_folder))
+	{
+		define('STORAGEPATH', $storage_folder.DIRECTORY_SEPARATOR);
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$storage_folder.DIRECTORY_SEPARATOR))
+		{
+			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+			echo 'Your storage folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF . ' on line ' . $storage_line;
+			exit(3); // EXIT_CONFIG
+		}
+
+		define('STORAGEPATH', $storage_folder.DIRECTORY_SEPARATOR);
+	}
 
 /*
  * --------------------------------------------------------------------
