@@ -1,0 +1,7 @@
+{
+	"description": "The CodeIgniter framework for hmvc",
+	"name": "codeigniter/framework",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT"
+}

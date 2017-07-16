@@ -1,0 +1,32 @@
+{
+	"name": "root/ci_factory",
+	"description": "Customizing codeigniter for swift application development",
+	"license": "MIT",
+	"keywords": [
+		"craftsman",
+		"codeigniter",
+		"cli"
+	],
+	"authors": [
+		{
+			"name": "Oteng Kwame",
+			"email": "developerkwame@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5.0",
+		"symfony/console": "^3.0",
+		"symfony/filesystem": "^3.0",
+		"symfony/process": "^3.0",
+		"symfony/finder": "^3.2",
+		"twig/twig" : "^1.18",
+		"vlucas/phpdotenv": "^2.4",
+		"psy/psysh": "@stable"
+	},
+	"autoload": {
+		"psr-4": { 
+			"Craftsman\\": ["cli/", "app/"]
+		}
+			
+	}
+}
