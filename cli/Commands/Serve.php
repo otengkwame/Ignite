@@ -1,7 +1,7 @@
 <?php
-namespace Craftsman\Commands;
+namespace CLI\Commands;
 
-use Craftsman\Core\Command;
+use CLI\Core\Command;
 use Symfony\Component\Process\ProcessUtils;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Console\Input\InputOption;
@@ -11,9 +11,9 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 /**
  * Serve Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
 class Serve extends Command

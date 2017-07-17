@@ -1,18 +1,18 @@
 <?php
-namespace Craftsman\Commands\Migrations;
+namespace CLI\Commands\Migrations;
 
-use Craftsman\Core\Migration;
+use CLI\Core\Migration;
 use Symfony\Component\Console\Input\InputArgument;
 
 /**
  * Migration\Version Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
-class Version extends Migration implements \Craftsman\Interfaces\Command
+class Version extends Migration implements \CLI\Interfaces\Command
 {
 	protected $name        	= 'migrate:version';
 	protected $description 	= 'Run a specific migration';

@@ -1,5 +1,5 @@
 <?php
-namespace Craftsman\Hooks;
+namespace CLI\Hooks;
 
 /**
 *
@@ -69,13 +69,13 @@ class Reporter
 		$repeater = rtrim(str_repeat('../', substr_count(APPPATH, '/')),'/');
 		return [
 			'post_controller_constructor' => [
-			    'class'    => '\Craftsman\Hooks\Reporter',
+			    'class'    => '\CLI\Hooks\Reporter',
 			    'function' => 'request',
 			    'filename' => 'Reporter.php',
 			    'filepath' => "{$repeater}".__DIR__
 			],
 			'post_controller' => [
-			    'class'    => '\Craftsman\Hooks\Reporter',
+			    'class'    => '\CLI\Hooks\Reporter',
 			    'function' => 'queries',
 			    'filename' => 'Reporter.php',
 			    'filepath' => "{$repeater}".__DIR__

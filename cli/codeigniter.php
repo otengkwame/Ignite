@@ -1,6 +1,6 @@
 <?php
 /**
- * Part of Craftsman Library
+ * Part of CLI Library
  *
  * @author     David Sosa Valdes <https://github.com/davidsosavaldes>
  * @license    MIT License
@@ -72,7 +72,7 @@ else
 
 # Make sure some config variables are set correctly
 get_config(array(
-	'subclass_prefix' => 'Craftsman_',
+	'subclass_prefix' => 'CLI_',
 ));
 
 $charset = strtoupper(config_item('charset'));

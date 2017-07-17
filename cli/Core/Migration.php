@@ -1,18 +1,18 @@
 <?php
-namespace Craftsman\Core;
+namespace CLI\Core;
 
-use Craftsman\Core\Command;
+use CLI\Core\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Craftsman\Core\Codeigniter;
+use CLI\Core\Codeigniter;
 
 /**
  * Base Migration Class
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  * @version     1.0.0
  */
@@ -78,7 +78,7 @@ abstract class Migration extends Command
       // Create a Codeigniter instance
       $codeigniter = new Codeigniter();
       $this->CI =& $codeigniter->get();
-      // Add the Craftsman extended packages
+      // Add the CLI extended packages
       $this->CI->load->add_package_path(IGNITEPATH.'cli/extend/');
       // Load the special migration settings
       $this->CI->config->load('migration', TRUE, TRUE);
@@ -109,7 +109,7 @@ abstract class Migration extends Command
       }
       else
       {
-        throw new \RuntimeException("Craftsman migration settings does not appear to set correctly.");
+        throw new \RuntimeException("CLI migration settings does not appear to set correctly.");
       }
 
       $this->setModelArguments();
@@ -118,7 +118,7 @@ abstract class Migration extends Command
     }
 
     /**
-     * Set Codeigniter Craftsman Migration Library arguments
+     * Set Codeigniter CLI Migration Library arguments
      */
     protected function setModelArguments()
     {

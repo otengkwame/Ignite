@@ -1,8 +1,8 @@
 <?php
-namespace Craftsman\Commands;
+namespace CLI\Commands;
 
-use Craftsman\Core\Command;
-use Craftsman\Core\Codeigniter;
+use CLI\Core\Command;
+use CLI\Core\Codeigniter;
 use Psy\Configuration;
 use Psy\Shell;
 
@@ -11,9 +11,9 @@ use Symfony\Component\Console\Input\InputOption;
 /**
  * Console Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
 class Console extends Command

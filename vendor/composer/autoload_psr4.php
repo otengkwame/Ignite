@@ -18,6 +18,7 @@ return array(
     'Psy\\' => array($vendorDir . '/psy/psysh/src/Psy'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'Ignite\\' => array($baseDir . '/'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
-    'Craftsman\\' => array($baseDir . '/cli', $baseDir . '/system', $baseDir . '/app'),
+    'CLI\\' => array($baseDir . '/cli'),
 );

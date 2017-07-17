@@ -1,17 +1,17 @@
 <?php
-namespace Craftsman\Commands\Migrations;
+namespace CLI\Commands\Migrations;
 
-use Craftsman\Core\Migration;
+use CLI\Core\Migration;
 
 /**
  * Migration\Refresh Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
-class Refresh extends Migration implements \Craftsman\Interfaces\Command
+class Refresh extends Migration implements \CLI\Interfaces\Command
 {
 	protected $name        	= 'migrate:refresh';
 	protected $description 	= 'Rollback all migrations and run them all again';

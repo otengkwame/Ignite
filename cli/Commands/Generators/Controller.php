@@ -1,17 +1,17 @@
 <?php
-namespace Craftsman\Commands\Generators;
+namespace CLI\Commands\Generators;
 
-use Craftsman\Core\Generator;
+use CLI\Core\Generator;
 
 /**
  * Generator\Controller Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
-class Controller extends Generator implements \Craftsman\Interfaces\Command
+class Controller extends Generator implements \CLI\Interfaces\Command
 {
 	protected $name 		= 'generate:controller';
 	protected $description 	= 'Generate a Controller';

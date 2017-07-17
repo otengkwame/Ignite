@@ -37,13 +37,17 @@ class ComposerStaticInitd86456a4bc7a166274ce19c3d425317e
             'Psr\\Log\\' => 8,
             'PhpParser\\' => 10,
         ),
+        'I' => 
+        array (
+            'Ignite\\' => 7,
+        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
         ),
         'C' => 
         array (
-            'Craftsman\\' => 10,
+            'CLI\\' => 4,
         ),
     );
 
@@ -96,15 +100,17 @@ class ComposerStaticInitd86456a4bc7a166274ce19c3d425317e
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Ignite\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
-        'Craftsman\\' => 
+        'CLI\\' => 
         array (
             0 => __DIR__ . '/../..' . '/cli',
-            1 => __DIR__ . '/../..' . '/system',
-            2 => __DIR__ . '/../..' . '/app',
         ),
     );
 
@@ -130,31 +136,6 @@ class ComposerStaticInitd86456a4bc7a166274ce19c3d425317e
     );
 
     public static $classMap = array (
-        'Craftsman\\Commands\\Console' => __DIR__ . '/../..' . '/cli/Commands/Console.php',
-        'Craftsman\\Commands\\Generators\\Controller' => __DIR__ . '/../..' . '/cli/Commands/Generators/Controller.php',
-        'Craftsman\\Commands\\Generators\\Migration' => __DIR__ . '/../..' . '/cli/Commands/Generators/Migration.php',
-        'Craftsman\\Commands\\Generators\\Model' => __DIR__ . '/../..' . '/cli/Commands/Generators/Model.php',
-        'Craftsman\\Commands\\Generators\\Seeder' => __DIR__ . '/../..' . '/cli/Commands/Generators/Seeder.php',
-        'Craftsman\\Commands\\Migrations\\Info' => __DIR__ . '/../..' . '/cli/Commands/Migrations/Info.php',
-        'Craftsman\\Commands\\Migrations\\Latest' => __DIR__ . '/../..' . '/cli/Commands/Migrations/Latest.php',
-        'Craftsman\\Commands\\Migrations\\Refresh' => __DIR__ . '/../..' . '/cli/Commands/Migrations/Refresh.php',
-        'Craftsman\\Commands\\Migrations\\Reset' => __DIR__ . '/../..' . '/cli/Commands/Migrations/Reset.php',
-        'Craftsman\\Commands\\Migrations\\Rollback' => __DIR__ . '/../..' . '/cli/Commands/Migrations/Rollback.php',
-        'Craftsman\\Commands\\Migrations\\Version' => __DIR__ . '/../..' . '/cli/Commands/Migrations/Version.php',
-        'Craftsman\\Commands\\Notes' => __DIR__ . '/../..' . '/cli/Commands/Notes.php',
-        'Craftsman\\Commands\\Seeder' => __DIR__ . '/../..' . '/cli/Commands/Seeder.php',
-        'Craftsman\\Commands\\Serve' => __DIR__ . '/../..' . '/cli/Commands/Serve.php',
-        'Craftsman\\Controllers\\Welcome' => __DIR__ . '/../..' . '/app/controllers/Welcome.php',
-        'Craftsman\\Core\\Codeigniter' => __DIR__ . '/../..' . '/cli/Core/Codeigniter.php',
-        'Craftsman\\Core\\Command' => __DIR__ . '/../..' . '/cli/Core/Command.php',
-        'Craftsman\\Core\\Generator' => __DIR__ . '/../..' . '/cli/Core/Generator.php',
-        'Craftsman\\Core\\Migration' => __DIR__ . '/../..' . '/cli/Core/Migration.php',
-        'Craftsman\\Database\\Seeder' => __DIR__ . '/../..' . '/cli/Database/Seeder.php',
-        'Craftsman\\Hooks\\Reporter' => __DIR__ . '/../..' . '/cli/Hooks/Reporter.php',
-        'Craftsman\\Interfaces\\Command' => __DIR__ . '/../..' . '/cli/Interfaces/Command.php',
-        'Craftsman\\Interfaces\\Generator' => __DIR__ . '/../..' . '/cli/Interfaces/Generator.php',
-        'Craftsman\\Interfaces\\Migration' => __DIR__ . '/../..' . '/cli/Interfaces/Migration.php',
-        'Craftsman\\Interfaces\\Seeder' => __DIR__ . '/../..' . '/cli/Interfaces/Seeder.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
         'Dotenv\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
         'Dotenv\\Exception\\InvalidCallbackException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php',

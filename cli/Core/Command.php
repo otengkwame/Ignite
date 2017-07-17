@@ -1,5 +1,5 @@
 <?php
-namespace Craftsman\Core;
+namespace CLI\Core;
 
 use Symfony\Component\Console\Command\Command as SymfonyCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -11,9 +11,9 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 /**
  * Command Class
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  * @version     1.0.0
  */
@@ -141,7 +141,7 @@ abstract class Command extends SymfonyCommand
             case 'writeln':
               return call_user_func_array(array($this->_output, 'writeln'), $arguments);
             default:
-              throw new \Exception("Craftsman\Command: [{$name}] method not found.");
+              throw new \Exception("CLI\Command: [{$name}] method not found.");
 
         }
     }

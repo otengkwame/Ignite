@@ -1,12 +1,12 @@
 <?php
-namespace Craftsman\Core;
+namespace CLI\Core;
 
 /**
  * Codeigniter Class
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  * @version     1.0.0
  */

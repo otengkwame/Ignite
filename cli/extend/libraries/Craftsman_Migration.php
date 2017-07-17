@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Craftsman Migration
+ * CLI Migration
  *
  * Run all the posible migration escenarios in a Codeigniter or HMVC application.
  *
@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		David Sosa Valdes
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
-class Craftsman_Migration extends \CI_Migration
+class CLI_Migration extends \CI_Migration
 {
 	/**
 	 * Module path where migrations are stored.
@@ -51,7 +51,7 @@ class Craftsman_Migration extends \CI_Migration
 		}
 		$this->_set_migration_path();
 
-		log_message('info', 'Craftsman Migration Class Init');
+		log_message('info', 'CLI Migration Class Init');
 	}
 
 	/**

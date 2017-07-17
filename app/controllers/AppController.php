@@ -3,21 +3,20 @@
 /**
  *
  */
-class {{ NAME }} extends CI_Controller
+class AppController extends CI_Controller
 {
-	{% if ACTIONS is empty %}
 	/**
 	 * Display a listing of the resource.
-	 * GET /{{ COLLECTION }}
+	 * GET /appcontroller
 	 */
 	public function index()
 	{
-
+		echo "hello";
 	}
 
 	/**
 	 * Display the specified resource.
-	 * GET /{{ COLLECTION }}/get/{id}
+	 * GET /appcontroller/get/{id}
 	 *
 	 * @param  int  $id
 	 */
@@ -28,7 +27,7 @@ class {{ NAME }} extends CI_Controller
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /{{ COLLECTION }}/create
+	 * GET /appcontroller/create
 	 */
 	public function create()
 	{
@@ -37,7 +36,7 @@ class {{ NAME }} extends CI_Controller
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /{{ COLLECTION }}/store
+	 * POST /appcontroller/store
 	 */
 	public function store()
 	{
@@ -46,7 +45,7 @@ class {{ NAME }} extends CI_Controller
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /{{ COLLECTION }}/edit/{id}
+	 * GET /appcontroller/edit/{id}
 	 *
 	 * @param  int  $id
 	 */
@@ -57,7 +56,7 @@ class {{ NAME }} extends CI_Controller
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /{{ COLLECTION }}/update/{id}
+	 * PUT /appcontroller/update/{id}
 	 *
 	 * @param  int  $id
 	 */
@@ -68,7 +67,7 @@ class {{ NAME }} extends CI_Controller
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /{{ COLLECTION }}/delete/{id}
+	 * DELETE /appcontroller/delete/{id}
 	 *
 	 * @param  int  $id
 	 */
@@ -76,20 +75,7 @@ class {{ NAME }} extends CI_Controller
 	{
 
 	}
-	{% else %}
-
-	{% for action in ACTIONS %}
-	/**
-	 * {{action|upper}}|DESCRIPTION|
-	 * @param [type] $[name] [<description>]
-	 * @return [type] [<description>]
-	 */
-	public function {{action}}()
-	{
-
 	}
-	{% endfor %}{% endif %}
-}
 
-/* End of file {{ FILENAME }} */
-/* Location: {{ PATH }}/{{ FILENAME }} */
+/* End of file AppController.php */
+/* Location: ./app/controllers/AppController.php */

@@ -1,5 +1,5 @@
 <?php
-namespace Craftsman\Interfaces;
+namespace CLI\Interfaces;
 
 interface Generator{}
 

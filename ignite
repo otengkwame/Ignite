@@ -6,12 +6,16 @@ use Symfony\Component\Console\Application;
 require_once(__DIR__.'/cli/bootstrap.php');
 
 /**
- * CLI Codeigniter Crafstman
+ * CLI Codeigniter Crafstman 
+ * Name changed to Ignite
  *
  * @author     David Sosa Valdes <https://github.com/davidsosavaldes>
+ * @author     Oteng Kwame Appiah Nti <https://github.com/otengkwame>
  * @license    MIT License
  * @link       https://github.com/davidsosavaldes/Craftsman
+ * @link       https://github.com/otengkwame/Ignite
  * @copyright  Copyright (c) 2016, David Sosa Valdes.
+ * @copyright  Copyright (c) 2017, Oteng Kwame Appiah Nti.
  */
 try 
 {
@@ -28,26 +32,26 @@ catch (Exception $e)
 }
 
 $generators = [
-	new Craftsman\Commands\Generators\Controller,
-	new Craftsman\Commands\Generators\Model,
-	new Craftsman\Commands\Generators\Migration,
-	new Craftsman\Commands\Generators\Seeder
+	new CLI\Commands\Generators\Controller,
+	new CLI\Commands\Generators\Model,
+	new CLI\Commands\Generators\Migration,
+	new CLI\Commands\Generators\Seeder
 ];
 
 $migrations = [
-	new Craftsman\Commands\Migrations\Info,
-	new Craftsman\Commands\Migrations\Version,
-	new Craftsman\Commands\Migrations\Latest,
-	new Craftsman\Commands\Migrations\Rollback,
-	new Craftsman\Commands\Migrations\Reset,
-	new Craftsman\Commands\Migrations\Refresh
+	new CLI\Commands\Migrations\Info,
+	new CLI\Commands\Migrations\Version,
+	new CLI\Commands\Migrations\Latest,
+	new CLI\Commands\Migrations\Rollback,
+	new CLI\Commands\Migrations\Reset,
+	new CLI\Commands\Migrations\Refresh
 ];
 
 $general = [
-	new Craftsman\Commands\Serve,
-	new Craftsman\Commands\Console,
-	new Craftsman\Commands\Notes,
-	new Craftsman\Commands\Seeder
+	new CLI\Commands\Serve,
+	new CLI\Commands\Console,
+	new CLI\Commands\Notes,
+	new CLI\Commands\Seeder
 ];
 
 // Set the commands

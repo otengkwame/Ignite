@@ -1,7 +1,7 @@
 <?php
-namespace Craftsman\Core;
+namespace CLI\Core;
 
-use Craftsman\Core\Command;
+use CLI\Core\Command;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
@@ -9,9 +9,9 @@ use Symfony\Component\Console\Input\InputOption;
 /**
  * Base Generator Class
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  * @version     1.0.0
  */

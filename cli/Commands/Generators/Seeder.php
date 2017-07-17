@@ -1,17 +1,17 @@
 <?php
-namespace Craftsman\Commands\Generators;
+namespace CLI\Commands\Generators;
 
-use Craftsman\Core\Generator;
+use CLI\Core\Generator;
 
 /**
  * Generator\Seeder Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
-class Seeder extends Generator implements \Craftsman\Interfaces\Command
+class Seeder extends Generator implements \CLI\Interfaces\Command
 {
 	protected $name 		= 'generate:seeder';
 	protected $description 	= 'Generate a Seeder';

@@ -1,17 +1,17 @@
 <?php
-namespace Craftsman\Commands\Migrations;
+namespace CLI\Commands\Migrations;
 
-use Craftsman\Core\Migration;
+use CLI\Core\Migration;
 
 /**
  * Migration\Reset Command
  *
- * @package     Craftsman
+ * @package     CLI
  * @author      David Sosa Valdes
- * @link        https://github.com/davidsosavaldes/Craftsman
+ * @link        https://github.com/davidsosavaldes/CLI
  * @copyright   Copyright (c) 2016, David Sosa Valdes.
  */
-class Reset extends Migration implements \Craftsman\Interfaces\Command
+class Reset extends Migration implements \CLI\Interfaces\Command
 {
 	protected $name        	= 'migrate:reset';
 	protected $description 	= 'Rollback all migrations';
