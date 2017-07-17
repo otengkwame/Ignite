@@ -6,7 +6,7 @@ use CLI\Core\Codeigniter;
 use Symfony\Component\Finder\Finder;
 
 /**
- * Serve Command
+ * Notes Command
  *
  * @package     CLI
  * @author      David Sosa Valdes

@@ -52,6 +52,11 @@ abstract class Generator extends Command
         'Generator filename'
       )
       ->addArgument(
+        'string',
+        InputArgument::REQUIRED,
+        'Generator filename'
+      )
+      ->addArgument(
         'options',
         InputArgument::IS_ARRAY,
         'Options passed to all generated files'
@@ -112,5 +117,5 @@ abstract class Generator extends Command
       );
     }
     return TRUE;
-  }
+  }    
 }

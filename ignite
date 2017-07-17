@@ -35,7 +35,8 @@ $generators = [
 	new CLI\Commands\Generators\Controller,
 	new CLI\Commands\Generators\Model,
 	new CLI\Commands\Generators\Migration,
-	new CLI\Commands\Generators\Seeder
+	new CLI\Commands\Generators\Seeder,
+	new CLI\Commands\Generators\Interfaces
 ];
 
 $migrations = [
@@ -51,7 +52,8 @@ $general = [
 	new CLI\Commands\Serve,
 	new CLI\Commands\Console,
 	new CLI\Commands\Notes,
-	new CLI\Commands\Seeder
+	new CLI\Commands\Seeder,
+	new \CLI\Commands\Key
 ];
 
 // Set the commands
