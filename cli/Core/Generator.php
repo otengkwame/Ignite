@@ -56,7 +56,7 @@ abstract class Generator extends Command
         InputArgument::IS_ARRAY,
         'Options passed to all generated files'
       )
-      ->aclearddOption(
+      ->addOption(
         'path',
         'p',
         InputOption::VALUE_REQUIRED,
