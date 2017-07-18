@@ -52,16 +52,11 @@ abstract class Generator extends Command
         'Generator filename'
       )
       ->addArgument(
-        'string',
-        InputArgument::REQUIRED,
-        'Generator filename'
-      )
-      ->addArgument(
         'options',
         InputArgument::IS_ARRAY,
         'Options passed to all generated files'
       )
-      ->addOption(
+      ->aclearddOption(
         'path',
         'p',
         InputOption::VALUE_REQUIRED,
