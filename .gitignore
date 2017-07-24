@@ -28,7 +28,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 !storage/logs/index.html
 !storage/logs/.htaccess
 
-#.env
+.env
 
 # IDE Files
 #-------------------------
