@@ -9,7 +9,7 @@ use CLI\Core\Generator;
  * @package     CLI
  * @author      Oteng Kwame Appiah Nti
  * @link        https://github.com/otengkwame/CLI
- * @copyright   Copyright (c) 2017, DOteng Kwame Appiah Nti.
+ * @copyright   Copyright (c) 2017, Oteng Kwame Appiah Nti.
  */
 class Interfaces extends Generator implements \CLI\Interfaces\Command
 {
@@ -21,9 +21,9 @@ class Interfaces extends Generator implements \CLI\Interfaces\Command
 	{
     	$filename = ucfirst($this->getArgument('filename'));
 		$basepath = rtrim(preg_replace('/Interfaces/', '', $this->getOption('path')),'/');
-		$appdir   = basename($basepath);
+		$appdir   = 'loop';
 
-		$interfacesPath = $basepath.'/Interfaces';
+		$interfacesPath = IGNITEPATH .'loop/Interfaces';
 
 		$this->text("Interface path: <comment>{$appdir}/interfaces</comment>");
 		$this->text("Filename: <comment>{$filename}.php</comment>");

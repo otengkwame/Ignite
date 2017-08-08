@@ -136,6 +136,7 @@ switch (ENVIRONMENT)
   *---------------------------------------------------------------
   *
   * This folder is where users of the system will store their files
+  * e.g uploads, profile pictures, pdfs and other documents
   */
     $storage_folder = "../storage"; $storage_line = __LINE__;
 
@@ -144,10 +145,20 @@ switch (ENVIRONMENT)
   * ASSETS FOLDER NAME
   *---------------------------------------------------------------
   *
-  * This folder is where you will put all the css, javascript, images and fonts.
+  * This folder is where you will put all the css, javascript, frontend images and fonts.
   * You can decide to locate the folder anywhere you like
   */
-    $asset_folder = 'assets'; $asset_line = __LINE__;
+    $assets_folder = 'assets'; $assets_line = __LINE__;
+
+ /*
+  *---------------------------------------------------------------
+  * COMPOSER FOLDER NAME
+  *---------------------------------------------------------------
+  *
+  * This folder is where composer vendor should be
+  * This will allow easy access for CI.
+  */
+  $composer_folder = '../vendor'; $composer_line = __LINE__;
 
  /*
   *---------------------------------------------------------------
@@ -333,39 +344,73 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
 
-	// The path to the "asset" folder
-	if (is_dir($asset_folder))
+	// The path to the "assets" folder
+	if (is_dir($assets_folder))
 	{
-		define('ASSET', $asset_folder.DIRECTORY_SEPARATOR);
+		define('ASSETS', $assets_folder.DIRECTORY_SEPARATOR);
 	}
 	else
 	{
-		if ( ! is_dir(BASEPATH.$asset_folder.DIRECTORY_SEPARATOR))
+		if ( ! is_dir(BASEPATH.$assets_folder.DIRECTORY_SEPARATOR))
 		{
 			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-			echo 'Your asset folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF . ' on line ' . $asset_line;
+			echo 'Your asset folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF . ' on line ' . $assets_line;
 			exit(3); // EXIT_CONFIG
 		}
 
-		define('ASSET', $asset_folder.DIRECTORY_SEPARATOR);
+		define('ASSETS', $assets_folder.DIRECTORY_SEPARATOR);
 	}
 
-	// The path to the "storage" folder
+	// The path to the "storage" directory
 	if (is_dir($storage_folder))
 	{
-		define('STORAGEPATH', $storage_folder.DIRECTORY_SEPARATOR);
+		if (($_temp = realpath($storage_folder)) !== FALSE)
+		{
+			$storage_folder = $_temp;
+		}
+		else
+		{
+			$storage_folder = strtr(
+				rtrim($storage_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
 	}
 	else
 	{
-		if ( ! is_dir(BASEPATH.$storage_folder.DIRECTORY_SEPARATOR))
-		{
-			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-			echo 'Your storage folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF . ' on line ' . $storage_line;
-			exit(3); // EXIT_CONFIG
-		}
-
-		define('STORAGEPATH', $storage_folder.DIRECTORY_SEPARATOR);
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your storage folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF . ' on line ' . $storage_line;
+		exit(3); // EXIT_CONFIG
 	}
+
+	define('STORAGEPATH', $storage_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "composer" directory
+	if (is_dir($composer_folder))
+	{
+		if (($_temp = realpath($composer_folder)) !== FALSE)
+		{
+			$composer_folder = $_temp;
+		}
+		else
+		{
+			$composer_folder = strtr(
+				rtrim($composer_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo '<pre>Your vendor folder path does not appear to be set correctly. Please open the following file and correct this in: <strong>'.SELF . ' on line '. $composer_line . '</strong><br>';
+		echo ' also after setting the name <strong>use terminal to iniatilize composer in the path you have set</strong> </pre>'; 
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('COMPOSERPATH', $composer_folder.DIRECTORY_SEPARATOR);
 
 /*
  * --------------------------------------------------------------------

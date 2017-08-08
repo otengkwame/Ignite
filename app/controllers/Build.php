@@ -11,7 +11,9 @@ class Build extends CI_Controller
 	 */
 	public function index()
 	{
-		echo "Let's build something great :)";
+		echo "Let's build something great :) <br>";
+		echo STORAGEPATH;
+		//log_message('info', 'index page opened');
 	}
 
 }

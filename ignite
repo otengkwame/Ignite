@@ -60,8 +60,10 @@ $general = [
 $commands = array_merge($generators, $migrations, $general);
 
 $application = new Application('Ignite', '1.0');
+
 // Add the default commands
 foreach ($commands as $key => $command) {
 	$application->add($command);
 }
+
 $application->run();
